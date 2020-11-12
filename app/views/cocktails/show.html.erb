@@ -1,3 +1,7 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <p><%= link_to "HOME",cocktails_path %></p>
+</nav>
+<div class="container">
 <h2 class="dose-title"><%= @cocktail.name %></h2>
 <% @cocktail.doses.each do |dose| %>
 <li class="list-group-item">Name: <%= dose.ingredient.name %> | <%= dose.description %></li>
@@ -5,3 +9,4 @@
             data: { confirm: "Are you sure?" } %>
   <% end %>
 <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %>
+</div>

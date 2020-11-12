@@ -1,6 +1,6 @@
 <div class="main-container"> 
-<nav class="navbar sticky-top navbar-dark bg-dark">
-  <p>HOME</p>
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <p><%= link_to "HOME",cocktails_path %></p>
 </nav>
   <%= simple_form_for (@cocktail) do |f| %>
   <%= f.input :name %>

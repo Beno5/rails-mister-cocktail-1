@@ -1,18 +1,21 @@
-<nav class="navbar fixed-top navbar-dark bg-dark">
-  <p>HOME</p>
+<nav class="navbar fixed-top">
+  <%= link_to "HOME",cocktails_path, class: "text-style" %>
 </nav>
 <div class="main-container"> 
   <div class="container">
       <ul class="row col-12 justify-content-center">
         <% @cocktails.each do |cocktail| %>
-        <div class="card my-card col-3 my-4 mx-2" style="width: 18rem;">
+        <div class="card my-card col-3 my-4 mx-4" style="width: 18rem;">
           <img class="card-img-top" src="https://cf.ltkcdn.net/cocktails/images/std/138513-425x281-iStock_000011959239XSmall.jpg" alt="Card image cap">
           <div class="card-body">
-            <p><li class="li-style"><%= link_to cocktail.name, cocktail_path(cocktail), class: "link-color"%> </li></p>
+            <p><li class="li-style"><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-style"%> </li></p>
+            <p><li class="li-style"><%= link_to "", cocktail_path(cocktail), method: :delete, class: "fa fa-trash trash-icon"%> </li></p>
+
           </div>
         </div>
         <% end %>
       </ul>
   </div>
 </div>
+
 

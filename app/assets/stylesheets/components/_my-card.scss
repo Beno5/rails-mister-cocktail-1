@@ -8,10 +8,20 @@
   border: 1px solid black;
   box-shadow:0px -1px 25px rgba(0,0,0,0.5), 0px 1px 25px rgba(0,0,0,0.7);
   text-align: center;
+  position: relative;
 }
-.link-color {
+.text-style {
   color: black;
   text-align: center;
+  text-shadow: 3px 3px 4px #333;
+  font-family: 'Goldman', cursive;
+  opacity: 0.8;
+  font-size: 20px;
+}
+.text-style:hover {
+  color: black;
+  opacity: 1;
+  font-size: 25px;
 }
 .li-style {
   list-style-type: none;
@@ -25,4 +35,21 @@
 .card-body {
   display: flex;
   justify-content: center;
+}
+.trash-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #d61324;
+  opacity: 0.8;
+  font-size: 16px;
+}
+.trash-icon:hover {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #f3091d;
+  opacity: 1;
+  font-size: 22px;
+  
 }
