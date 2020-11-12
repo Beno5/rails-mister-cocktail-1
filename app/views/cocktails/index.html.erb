@@ -1,6 +1,15 @@
-<ul>
-  <% @cocktails.each do |cocktail| %>
-   <li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
+<div class="main-container"> 
+  <div class="cocktails-list">
+    <ul>
+      <% @cocktails.each do |cocktail| %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://cf.ltkcdn.net/cocktails/images/std/138513-425x281-iStock_000011959239XSmall.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><li><%= link_to cocktail.name, cocktail_path(cocktail) %> </li></p>
+        </div>
+      </div>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
-  <% end %>
-</ul>
