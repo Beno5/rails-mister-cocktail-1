@@ -1,5 +1,6 @@
-<nav class="navbar fixed-top navbar-dark bg-dark">
-  <p><%= link_to "HOME",cocktails_path %></p>
+<nav class="navbar fixed-top">
+  <%= link_to "HOME",cocktails_path, class: "text-style" %>
+  <%= link_to "ADD COCKTAIL",new_cocktail_path, class: "text-style" %>
 </nav>
 <div class="container">
 <h2 class="dose-title"><%= @cocktail.name %></h2>
