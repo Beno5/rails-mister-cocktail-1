@@ -7,7 +7,7 @@
       <ul class="row col-12 justify-content-center">
         <% @cocktails.each do |cocktail| %>
         <div class="card my-card col-3 my-4 mx-4" style="width: 18rem;">
-          <img class="card-img-top" src="https://cf.ltkcdn.net/cocktails/images/std/138513-425x281-iStock_000011959239XSmall.jpg" alt="Card image cap">
+          <%= cl_image_tag cocktail.photo.key, :class => "card-img-top" %>
           <div class="card-body">
             <p><li class="li-style"><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-style"%> </li></p>
             <p><li class="li-style"><%= link_to "", cocktail_path(cocktail), method: :delete, class: "fa fa-trash trash-icon"%> </li></p>
