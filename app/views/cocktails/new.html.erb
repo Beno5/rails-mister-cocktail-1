@@ -3,8 +3,10 @@
   <%= link_to "HOME",cocktails_path, class: "text-style" %>
   <%= link_to "ADD COCKTAIL",new_cocktail_path, class: "text-style" %>
 </nav>
-  <%= simple_form_for (@cocktail) do |f| %>
+<div class="form-cont">
+  <%= simple_form_for (@cocktail), html: { class: "form-horizontal"} do |f| %>
   <%= f.input :name %>
   <%= f.submit %>
 <% end %>
+</div>
 </div>
